@@ -1,8 +1,24 @@
 .App {
   text-align: center;
 }
-
 .gridBox {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  gap: 0;
+}
+.gridBox img {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+.bannerDetails {
+  position: absolute;
+  top: 200px;
+}
+.bannerDetails > p {
+  color: white;
+}
+.bannerImage {
+  position: relative;
 }
