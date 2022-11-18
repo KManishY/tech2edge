@@ -1,35 +1,28 @@
 import React from "react";
-
 import "../App.css";
 const Characters = ({ data, imageApi }) => {
-	console.log(data);
-	return (
-		<div className="gridBox">
-			{data &&
-				data.map(e =>
-					<div key={e.id}>
-						<div class="card" style={{ width: "18rem" }}>
-							<img
-								class="card-img-top"
-								src={`${imageApi}${e.img}`}
-								alt="Card image cap"
-							/>
-							<div class="card-body">
-								<p>
-									Name:{e.name}
-								</p>
-								<p>
-									Age:{e.age}
-								</p>
-								<p>
-									Profession:{e.profession}
-								</p>
-							</div>
-						</div>
-					</div>
-				)}
-		</div>
-	);
+  console.log(data);
+  return (
+    <div className="gridBox">
+      {data &&
+        data.map((e) => (
+          <div key={e.id}>
+            <div class="card" style={{ width: "18rem" }}>
+              <img
+                class="card-img-top"
+                src={`${imageApi}${e.img}`}
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <p>Name:{e.name}</p>
+                <p>Age:{e.age}</p>
+                <p>Profession:{e.profession}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+    </div>
+  );
 };
 
 export default Characters;
